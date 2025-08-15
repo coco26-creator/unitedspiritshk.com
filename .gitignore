@@ -1,0 +1,7 @@
+# OS / editor junk files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Node (if any)
+node_modules/
