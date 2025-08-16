@@ -1,171 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>United Spirits</title>
-  <meta name="description" content="Premium wines, whiskeys, brandies and vodka. United Spirits.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav">
-      <div class="brand">United <span>Spirits</span></div>
-      <nav class="menu">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#visitors">Visitors</a>
-        <a href="#contact">Contact</a>
-        <a class="btn whatsapp" target="_blank" rel="noopener" href="https://wa.me/85269346630">WhatsApp</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Open menu">
-        <i data-lucide="menu"></i>
-      </button>
+<body class="bg-white text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="relative h-screen w-full overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="assets/videos/hero.mp4" type="video/mp4">
+      <!-- fallback -->
+      <img src="assets/images/hero-fallback.jpg" alt="Hero Background" class="w-full h-full object-cover">
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <h1 class="text-5xl font-bold text-white">United Spirits</h1>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- Hero -->
-    <section id="home" class="section hero">
-      <div class="container grid-2">
-        <div>
-          <h1 class="display">Crafted Elegance in Every Drop</h1>
-          <p class="lead">Discover our premium collection of wines, whiskeys, brandies, and vodka—made with care, served with pride.</p>
-          <div class="actions">
-            <a href="#products" class="btn primary">Explore Collection</a>
-            <a href="#contact" class="btn outline">Contact Us</a>
-          </div>
+  <!-- Products -->
+  <section id="products" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">Our Products</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <div class="bg-white shadow rounded-lg p-4">
+          <img src="assets/images/product1.jpg" alt="Corazón de Lolita" class="rounded-lg mb-3">
+          <h3 class="font-semibold">Corazón de Lolita</h3>
         </div>
-        <div class="hero-art">
-          <img src="assets/img/placeholder.png" alt="Bottles" />
+        
+        <div class="bg-white shadow rounded-lg p-4">
+          <img src="assets/images/product2.jpg" alt="Honney Conti XO" class="rounded-lg mb-3">
+          <h3 class="font-semibold">Honney Conti XO</h3>
         </div>
+        
+        <div class="bg-white shadow rounded-lg p-4">
+          <img src="assets/images/product3.jpg" alt="Planet 1 Cognac" class="rounded-lg mb-3">
+          <h3 class="font-semibold">Planet 1 Cognac</h3>
+        </div>
+        
       </div>
-    </section>
-
-    <!-- Products -->
-    <section id="products" class="section">
-      <div class="container">
-        <div class="center">
-          <span class="badge">Our Premium Collection</span>
-          <h2 class="headline">Exceptional Spirits</h2>
-          <p class="subhead">Carefully crafted wines, whiskeys, brandies and vodka.</p>
-        </div>
-
-        <div class="filters">
-          <button class="chip active" data-filter="all">All</button>
-          <button class="chip" data-filter="wine">Wines</button>
-          <button class="chip" data-filter="whiskey">Whiskey</button>
-          <button class="chip" data-filter="brandy">Brandy</button>
-          <button class="chip" data-filter="vodka">Vodka</button>
-        </div>
-
-        <div id="product-grid" class="grid-3"></div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section tint">
-      <div class="container grid-2">
-        <div>
-          <h2 class="headline">About United Spirits</h2>
-          <p>We blend tradition with innovation to create spirits that celebrate craftsmanship and community. From the vineyards to your glass, quality is our promise.</p>
-          <ul class="checklist">
-            <li>Premium ingredients & meticulous aging</li>
-            <li>Sustainable sourcing & production</li>
-            <li>Award‑winning blends and vintages</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Why Choose Us</h3>
-          <p>Our portfolio caters to connoisseurs and newcomers alike. Whether you love the warmth of whiskey or the vibrance of wine, you'll find something unforgettable.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Visitors -->
-    <section id="visitors" class="section">
-      <div class="container grid-3 equal">
-        <div class="stat card">
-          <div class="stat-num">25+</div>
-          <div class="stat-label">Product SKUs</div>
-        </div>
-        <div class="stat card">
-          <div class="stat-num">15</div>
-          <div class="stat-label">Countries Sourced</div>
-        </div>
-        <div class="stat card">
-          <div class="stat-num">24/7</div>
-          <div class="stat-label">Support</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section tint">
-      <div class="container">
-        <div class="center">
-          <span class="badge">Get In Touch</span>
-          <h2 class="headline">Connect With United Spirits</h2>
-          <p class="subhead">Wholesale inquiries, private tastings, or product questions—we’d love to hear from you.</p>
-        </div>
-        <div class="grid-3 contact-cards">
-          <div class="card contact-card">
-            <div class="icon"><i data-lucide="map-pin"></i></div>
-            <h3>Visit Our Facility</h3>
-            <p>123 Distillery Lane<br>Premium Valley, CA 90210</p>
-            <a href="#" class="btn outline">Get Directions</a>
-          </div>
-          <div class="card contact-card">
-            <div class="icon"><i data-lucide="phone"></i></div>
-            <h3>Call Us</h3>
-            <p>+1 (555) 123‑WINE<br>+1 (555) 123‑9463</p>
-            <a href="tel:+15551239463" class="btn outline">Call Now</a>
-          </div>
-          <div class="card contact-card">
-            <div class="icon"><i data-lucide="mail"></i></div>
-            <h3>Email Us</h3>
-            <p>info@unitedspirits.com<br>sales@unitedspirits.com</p>
-            <a href="mailto:info@unitedspirits.com" class="btn outline">Send Email</a>
-          </div>
-        </div>
-
-        <div class="socials">
-          <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=61579254602509" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-          <a target="_blank" rel="noopener" href="https://www.instagram.com/sunny_hocha/" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-          <a target="_blank" rel="noopener" href="https://x.com/SunnyHocha" aria-label="X / Twitter"><i data-lucide="twitter"></i></a>
-          <a target="_blank" rel="noopener" href="https://www.tiktok.com/@sunnyhocha0?lang=en-GB" aria-label="TikTok"><i data-lucide="music"></i></a>
-          <a target="_blank" rel="noopener" href="https://wa.me/85269346630" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Floating chat widget -->
-  <button id="chat-open" class="fab" aria-label="Open chat"><i data-lucide="message-circle"></i></button>
-
-  <div id="chat" class="chat hidden" role="dialog" aria-modal="true" aria-labelledby="chat-title">
-    <div class="chat-header">
-      <div class="chat-title"><i data-lucide="wine"></i><span id="chat-title">Sunny Hocha Assistant</span></div>
-      <button id="chat-close" class="icon-btn" aria-label="Close chat"><i data-lucide="x"></i></button>
     </div>
-    <div id="chat-messages" class="chat-body"></div>
-    <div class="chat-input">
-      <input id="chat-text" type="text" placeholder="Ask about our wines, whiskeys, or brandies..." />
-      <button id="chat-send" class="icon-btn" aria-label="Send"><i data-lucide="send"></i></button>
-    </div>
-  </div>
+  </section>
 
-  <footer class="site-footer">
-    <div class="container small">
-      <p>© <span id="year"></span> United Spirits. All rights reserved.</p>
+  <!-- Events & Visits -->
+  <section id="events" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">Events & Visits</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+          <img src="assets/images/event1.jpg" alt="Trade Show" class="rounded-lg mb-3">
+          <h3 class="font-semibold">Brand Collaborations</h3>
+          <p>Trade Show Product Review</p>
+        </div>
+
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+          <img src="assets/images/event2.jpg" alt="Chile Wine Promotion" class="rounded-lg mb-3">
+          <h3 class="font-semibold">Diplomatic Visits</h3>
+          <p>Chile Wine Promotion</p>
+        </div>
+
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+          <img src="assets/images/event3.jpg" alt="Wine Festival" class="rounded-lg mb-3">
+          <h3 class="font-semibold">Education Events</h3>
+          <p>Wine Festival Presentation</p>
+        </div>
+
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+          <img src="assets/images/event4.jpg" alt="Winery Tour" class="rounded-lg mb-3">
+          <h3 class="font-semibold">Facility Tours</h3>
+          <p>Winery Barrel Room Tour</p>
+        </div>
+
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+          <img src="assets/images/event5.jpg" alt="Ambassador Visit" class="rounded-lg mb-3">
+          <h3 class="font-semibold">Meetings</h3>
+          <p>Ambassador Visit</p>
+        </div>
+
+        <div class="bg-gray-50 shadow rounded-lg p-4">
+          <img src="assets/images/event6.jpg" alt="Strategic Partnership" class="rounded-lg mb-3">
+          <h3 class="font-semibold">Products</h3>
+          <p>Honney Conti XO Launch</p>
+        </div>
+
+      </div>
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-white text-center">
+    <p>© 2025 United Spirits. All Rights Reserved.</p>
   </footer>
 
-  <script src="assets/js/app.js" defer></script>
 </body>
 </html>
